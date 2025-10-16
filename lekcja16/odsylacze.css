@@ -1,0 +1,91 @@
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1rem, 4vw, 2rem);
+    background: linear-gradient(135deg, #f4f4f9 0%, #dde7f9 100%);
+    color: #1f2933;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 1.25rem + 1.5vw, 2.35rem);
+    margin-bottom: clamp(1.5rem, 1rem + 2vw, 2.25rem);
+    text-transform: uppercase;
+    letter-spacing: clamp(0.045em, 0.02em + 0.5vw, 0.09em);
+    color: #0b1e3a;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: clamp(-0.85rem, -1vw, -0.6rem);
+    width: clamp(3.25rem, 8vw, 4.75rem);
+    height: clamp(0.18rem, 0.12rem + 0.2vw, 0.24rem);
+    background: linear-gradient(90deg, #0078d7 0%, #00b4d8 100%);
+    transform: translateX(-50%);
+    border-radius: 999px;
+}
+
+p {
+    margin: clamp(0.75rem, 1.5vw, 1.35rem) 0;
+    padding: clamp(1rem, 1.25rem + 1vw, 1.75rem) clamp(1.1rem, 1rem + 1.6vw, 2rem);
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: clamp(0.9rem, 0.6rem + 1vw, 1.25rem);
+    box-shadow: 0 clamp(0.3rem, 0.2rem + 1vw, 0.55rem) clamp(1.0rem, 0.7rem + 1.5vw, 1.2rem) rgba(15, 23, 42, 0.12);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    max-width: clamp(18.75rem, 70vw, 26.25rem);
+    width: 100%;
+}
+
+a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(0.4rem, 0.3rem + 0.3vw, 0.6rem);
+    color: #0b6efd;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+a:hover {
+    color: #084298;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(60, 70, 85, 0.25);
+}
+
+img {
+    width: clamp(3.2rem, 10vw, 4.5rem);
+    height: clamp(3.2rem, 10vw, 4.5rem);
+    border-radius: clamp(0.85rem, 0.5rem + 1vw, 1.1rem);
+    border: clamp(0.08rem, calc(0.08rem + 0.12vw), 0.14rem) solid rgba(11, 110, 253, 0.25);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+a:hover img {
+    border-color: rgba(8, 66, 152, 0.55);
+    transform: scale(1.05);
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: clamp(1.25rem, 4vw, 1.75rem) clamp(0.85rem, 4vw, 1.1rem);
+    }
+
+    h1 {
+        font-size: clamp(1.55rem, 1.3rem + 1vw, 1.8rem);
+        letter-spacing: 0.05em;
+    }
+
+    p {
+        padding: clamp(0.85rem, 1rem + 1vw, 1.25rem) clamp(0.9rem, 1rem + 1vw, 1.5rem);
+    }
+}
