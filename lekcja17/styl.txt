@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lekcja 17</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .red {
+            color: red;
+        }
+        div {
+            border: 5px solid rgb(91, 112, 0);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="red">Tekst został umieszczony w akapicie</p>
+        <p class="red">Tekst został umieszczony w akapicie</p>
+    </div>
+    <p>Tekst poza akapitem</p>
+</body>
+</html>
