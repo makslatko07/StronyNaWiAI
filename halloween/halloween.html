@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎃 Nawiedzony Halloween 2025 🎃</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animowane duchy -->
+    <div class="ghost" style="left: 10%; top: 20%;">👻</div>
+    <div class="ghost" style="left: 80%; top: 40%; animation-delay: 2s;">👻</div>
+    <div class="ghost" style="left: 50%; top: 60%; animation-delay: 4s;">👻</div>
+    
+    <!-- Latające nietoperze -->
+    <div class="bat" style="animation-delay: 0s;">🦇</div>
+    <div class="bat" style="animation-delay: 5s; top: 50%;">🦇</div>
+    <div class="bat" style="animation-delay: 10s; top: 30%;">🦇</div>
+
+    <header>
+        <h1>🎃 NAWIEDZONY HALLOWEEN 🎃</h1>
+        <p class="subtitle">Witaj w krainie strachu i zabawy!</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('home')">🏠 Strona Główna</button>
+        <button onclick="showSection('game')">🎮 Gra</button>
+        <button onclick="showSection('quiz')">❓ Quiz</button>
+    </nav>
+
+    <div class="container">
+        <!-- Sekcja Główna -->
+        <section id="home" class="section active">
+            <h2>👻 Witamy w Świecie Halloween! 👻</h2>
+            <p>
+                Przygotuj się na niezapomnianą przygodę w najbardziej przerażającą noc roku! 
+                Na tej stronie znajdziesz:
+            </p>
+            <ul>
+                <li>🎃 Interaktywną grę Pumpkin Clicker</li>
+                <li>❓ Straszny quiz wiedzy o Halloween</li>
+            </ul>
+            <p class="cta-text">
+                <strong>Wybierz sekcję z menu powyżej i zacznij zabawę!</strong>
+            </p>
+        </section>
+
+        <!-- Sekcja Gry -->
+        <section id="game" class="section">
+            <h2>🎃 Pumpkin Clicker 🎃</h2>
+            <div class="game-container">
+                <p class="game-description">Klikaj w dynię, aby zdobywać punkty!</p>
+                <div class="score">
+                    Wynik: <span id="score">0</span> 🎃
+                </div>
+                <div id="pumpkin-clicker" onclick="clickPumpkin()">🎃</div>
+                <button onclick="resetGame()" class="reset-button">
+                    Reset Gry
+                </button>
+            </div>
+        </section>
+
+        <!-- Sekcja Quiz -->
+        <section id="quiz" class="section">
+            <h2>❓ Halloweenowy Quiz ❓</h2>
+            <div id="quiz-container"></div>
+            <div class="quiz-results">
+                <p class="score">Wynik: <span id="quiz-score">0</span> / <span id="quiz-total">5</span></p>
+                <button onclick="resetQuiz()" class="reset-quiz-button">
+                    Resetuj Quiz
+                </button>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>🎃 Happy Halloween 2025! 🎃</p>
+        <p class="footer-subtitle">Cukierek albo psikus! 🍬👻</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
