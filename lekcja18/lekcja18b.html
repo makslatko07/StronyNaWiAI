@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Znaki dorgowe</title>
+		<meta author="Maksymilian Latko" />
+	</head>
+    <style>
+        * {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	min-height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+.znaki {
+	display: grid;
+	grid-template-columns: repeat(3, auto);
+	gap: 44px;
+	align-items: center;
+	justify-items: center;
+}
+
+.znak {
+	width: 200px;
+	height: 200px;
+	display: grid;
+	place-items: center;
+	font-weight: 800;
+	color: #fff;
+}
+
+.znak-slepa {
+	background: #2b265f;
+	border: 1px solid #000000;
+	border-radius: 12px;
+	position: relative;
+}
+
+.slepa-znak {
+	width: 34px;
+	height: 118px;
+	background: #ffffff;
+	position: relative;
+	border-radius: 6px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.slepa-znak::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 112px;
+	height: 25px;
+	background: #d11a2a;
+	border-radius: 4px;
+}
+
+.znak-zakazu {
+	background: #d11a2a;
+	border: 12px solid #ffffff;
+	border-radius: 50%;
+	position: relative;
+}
+
+.znak-zakazu .zakaz-pasek {
+	width: 120px;
+	height: 28px;
+	background: #ffffff;
+	border-radius: 6px;
+}
+
+.znak-ustap {
+	position: relative;
+	width: 200px;
+	height: 200px;
+	display: grid;
+	place-items: center;
+	transform: rotate(180deg);
+}
+
+.ustap-outer {
+	width: 0;
+	height: 0;
+	border-left: 100px solid transparent;
+	border-right: 100px solid transparent;
+	border-top: 0 solid transparent;
+	border-bottom: 170px solid #d11a2a;
+	position: absolute;
+	transform: translateY(10px);
+}
+
+.ustap-inner {
+	width: 0;
+	height: 0;
+	border-left: 82px solid transparent;
+	border-right: 82px solid transparent;
+	border-top: 0 solid transparent;
+	border-bottom: 140px solid #f7f05b;
+	position: absolute;
+	transform: translateY(18px);
+}
+
+    </style>
+	<body>
+	
+		<div class="znaki">
+			<div class="znak znak-slepa">
+				<span class="slepa-znak"></span>
+			</div>
+
+			<div class="znak znak-zakazu">
+				<span class="zakaz-pasek"></span>
+			</div>
+
+			<div class="znak znak-ustap">
+				<div class="ustap-outer"></div>
+				<div class="ustap-inner"></div>
+			</div>
+		</div>
+	</body>
+</html>
