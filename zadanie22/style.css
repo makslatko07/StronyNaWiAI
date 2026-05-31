@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #1c2432;
+  --ink-deep: #121826;
+  --sand: #f4efe6;
+  --clay: #c5643c;
+  --moss: #3f5b4c;
+  --sky: #7aa6c9;
+  --paper: #fffaf2;
+  --shadow: rgba(18, 24, 38, 0.12);
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, #f7e6cf 0%, var(--sand) 45%) no-repeat,
+    linear-gradient(140deg, #f9f1e2 0%, #efe2cd 55%, #f3e9db 100%);
+  color: var(--ink);
+  min-height: 100vh;
+  padding: 48px 20px 60px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+main {
+  max-width: 1020px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+header {
+  margin-bottom: 36px;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 3.2vw, 3.4rem);
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+p {
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2d3647;
+}
+
+.stroje {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.stroj {
+  background: var(--paper);
+  border-radius: 22px;
+  box-shadow: 0 24px 50px -32px var(--shadow);
+  overflow: hidden;
+  border: 1px solid rgba(28, 36, 50, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  animation: rise 750ms ease-out both;
+}
+
+.zdj {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: saturate(1.05) contrast(1.03);
+}
+
+.opis {
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+.opis p {
+  line-height: 1.7;
+  color: #313b4c;
+}
